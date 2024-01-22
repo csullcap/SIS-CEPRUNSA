@@ -1,0 +1,5 @@
+/.venv
+.env
+certificado_ssh.pem
+db.sqlite3
+cacert-2023-12-12.pem
