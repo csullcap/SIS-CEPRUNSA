@@ -1,6 +1,6 @@
 from django.db import models
-import apps.CURSOS.models as CURSOS
-import apps.DATOS_PERSONALES.models as DATOS_PERSONALES
+from apps.CURSOS.models import CURSOS
+from apps.DATOS_PERSONALES.models import DATOS_PERSONALES
 # Create your models here.
 class DOCENTES(models.Model):
     id_docente = models.AutoField(primary_key=True)
