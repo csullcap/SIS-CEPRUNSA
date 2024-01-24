@@ -13,3 +13,12 @@ class DATOS_PERSONALES(models.Model):
     correo = models.CharField(max_length=50, blank=True)
     correo_ceprunsa = models.CharField(max_length=50)
     fecha_nacimiento = models.DateField()
+
+    class Meta:
+        db_table = "DATOS_PERSONALES"
+        verbose_name = "DATOS_PERSONALES"
+        verbose_name_plural = "DATOS_PERSONALES"
+        ordering = ["id_datos_personales"]
+    
+    def __str__(self):
+        return self.nombres + " " + self.apellidos

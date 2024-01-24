@@ -16,3 +16,12 @@ class COORDINADORES_CURSOS(models.Model):
     fecha_fin = models.DateField(blank=True, null=True)
     #mediumtext
     observaciones = models.TextField(blank=True, null=True)
+
+    class Meta:
+        db_table = "COORDINADORES_CURSOS"
+        verbose_name = "COORDINADOR_CURSO"
+        verbose_name_plural = "COORDINADORES_CURSOS"
+        ordering = ["id_coordinador_curso"]
+    
+    def __str__(self):
+        return self.id_coordinador_curso
