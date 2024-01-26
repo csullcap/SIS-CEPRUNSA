@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class DATOS_PERSONALES(models.Model):
+class INFORMACION_PERSONAL(models.Model):
     id_datos_personales = models.AutoField(primary_key=True)
     nombres = models.CharField(max_length=50)
     apellidos = models.CharField(max_length=75)
@@ -15,10 +15,11 @@ class DATOS_PERSONALES(models.Model):
     fecha_nacimiento = models.DateField()
 
     class Meta:
-        db_table = "DATOS_PERSONALES"
-        verbose_name = "DATOS_PERSONALES"
-        verbose_name_plural = "DATOS_PERSONALES"
-        ordering = ["id_datos_personales"]
+        db_table = 'INFORMACIONES_PERSONALES'
+        verbose_name = 'INFORMACION_PERSONAL'
+        verbose_name_plural = 'INFORMACIONES_PERSONALES'
+        ordering = ['id_datos_personales']
     
     def __str__(self):
-        return self.nombres + " " + self.apellidos
+        return self.nombres + ' ' + self.apellidos
+    

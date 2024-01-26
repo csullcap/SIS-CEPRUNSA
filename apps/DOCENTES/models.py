@@ -1,12 +1,14 @@
 from django.db import models
-from apps.CURSOS.models import CURSOS
-from apps.DATOS_PERSONALES.models import DATOS_PERSONALES
+from apps.CURSOS.models import CURSO
+from apps.INFORMACIONES_PERSONALES.models import INFORMACION_PERSONAL
+from apps.DATOS_PAGOS.models import DATOS_PAGO
+
 # Create your models here.
-class DOCENTES(models.Model):
+class DOCENTE(models.Model):
     id_docente = models.AutoField(primary_key=True)
-    id_curso = models.ForeignKey(CURSOS, models.DO_NOTHING, db_column='id_curso')
-    #id_datos_pago = models.ForeignKey('DATOS_PAGO', models.DO_NOTHING, db_column='id_datos_pago')
-    id_datos_personales = models.ForeignKey(DATOS_PERSONALES, models.DO_NOTHING, db_column='id_datos_personales')
+    id_curso = models.ForeignKey(CURSO, models.DO_NOTHING, db_column='id_curso')
+    id_datos_pago = models.ForeignKey(DATOS_PAGO, models.DO_NOTHING, db_column='id_datos_pago')
+    id_datos_personales = models.ForeignKey(INFORMACION_PERSONAL, models.DO_NOTHING, db_column='id_datos_personales')
 
     class Meta:
         db_table = 'DOCENTES'
